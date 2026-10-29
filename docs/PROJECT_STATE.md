@@ -1,0 +1,3 @@
+# Project State — AI Reliability Platform
+
+The project is currently at Milestone 0: Environment and repository setup. The GitHub repository has been initialized, the project structure and metadata have been created, and the Python development dependencies (`python-dotenv`, `pydantic`, `httpx`, `pytest`, `pytest-cov`, and `ruff`) have been installed and verified in a Python 3.14.3 virtual environment. The next milestone is to define the first LLM evaluation use case and its measurable quality metrics, then implement a minimal evaluation pipeline. No application logic or automated tests have been implemented yet; LLM provider selection and API connectivity remain unverified. The initial development budget is ₹0.
