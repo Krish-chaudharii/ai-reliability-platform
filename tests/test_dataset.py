@@ -27,3 +27,9 @@ def test_load_items_returns_ten_items() -> None:
 def test_load_items_strips_whitespace() -> None:
     items = load_items(DATA_PATH)
     assert items[0].reference == "New Delhi"
+
+def test_load_items_rejects_empty_answer(tmp_path: Path) -> None:
+    bad_file = tmp_path / "bad.csv"
+    bad_file.write_text("S.no,Question,Answer\n1, what is 2+2?,\n", encoding = "utf-8")
+    with pytest.raises(ValueError, match="line 2"):
+        load_items(bad_file)
